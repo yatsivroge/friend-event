@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,13 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'shop-project';
+  title = 'friend-event';
   public showSideNav = false;
 
+  constructor(translate: TranslateService) {
+    translate.setDefaultLang('ua');
+    translate.use('ua');
+  }
   public onSideNavChange(showNav: boolean): void {
     this.showSideNav = showNav;
   }
