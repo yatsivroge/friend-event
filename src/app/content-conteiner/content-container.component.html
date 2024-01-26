@@ -1,11 +1,14 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer class="example-sidenav"
-              mode="side"
-              [opened]="showSideNav"
-  >
-    <p>Auto-resizing sidenav</p>
+<mat-drawer-container class="container" autosize>
+  <mat-drawer class="sidenav" mode="side" [opened]="showSideNav">
+    <mat-list>
+      <mat-list-item class="sidenav-item" matRipple>User wishlist</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="sidenav-item" matRipple>Gifts idea</mat-list-item>
+      <mat-divider class="sidenav-item"></mat-divider>
+      <mat-list-item  class="sidenav-item" matRipple>Setting</mat-list-item>
+    </mat-list>
   </mat-drawer>
-  <div class="example-sidenav-content">
-    content
+  <div class="sidenav-content default-container">
+    <app-wish-list></app-wish-list>
   </div>
 </mat-drawer-container>

@@ -1,15 +1,18 @@
-.example-container {
+@import "../../assets/styles/default-styles";
+
+.container {
   width: 100%;
   height: 100%;
 }
 
-.example-sidenav-content {
-  display: flex;
+.sidenav-content {
+  @include flex($justify-c: flex-start, $flex-dir: column);
   height: 100%;
-  align-items: center;
-  justify-content: center;
+  min-height: 100%;
 }
 
-.example-sidenav {
-  padding: 20px;
+.sidenav {
+  &-item {
+    cursor: pointer !important;
+  }
 }
