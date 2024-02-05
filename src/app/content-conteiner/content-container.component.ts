@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./content-container.component.scss']
 })
 export class ContentContainerComponent {
-  @Input() showSideNav = false;
+  @Input() showSideNav!: boolean;
 }

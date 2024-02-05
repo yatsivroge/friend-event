@@ -1,0 +1,21 @@
+<div class="wish-list">
+  <div class="wish-list__header default-paddings">
+    <h1>User wishlist</h1>
+  </div>
+  <div class="wish-list__content default-container default-paddings">
+    <div class="wish-list__actions">
+      <button color="primary"
+              mat-raised-button
+              routerLink="/create">Add Item</button>
+    </div>
+    <div class="wish-list__grid" *ngIf="(wishes$ | async) as wishes; else emptyList">
+      <app-wish-card  *ngFor="let wish of wishes;index as idx"
+                      [title]="wish.title"
+                      [themeIdx]="idx + 1"
+      ></app-wish-card>
+    </div>
+    <ng-template #emptyList>
+      <p>Your wishlist is empty. Add your first item by clicking the "Add item" button.</p>
+    </ng-template>
+  </div>
+</div>

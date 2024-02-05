@@ -1,0 +1,37 @@
+@import "../../../../assets/styles/default-styles";
+
+:host {
+  display: block;
+  width: 225px;
+  height: 225px;
+  border-radius: 6px;
+  background: aqua;
+}
+
+.wish-card {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  color: $primary-white;
+  @include flex();
+
+  &__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__theme-1 {
+    background-color: $card-color-1;
+  }
+  &__theme-2 {
+    background-color: $card-color-2;
+  }
+  &__theme-3 {
+    background-color: $card-color-3;
+  }
+}
