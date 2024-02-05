@@ -8,7 +8,7 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class AppComponent {
   title = 'friend-event';
-  public showSideNav = false;
+  public showSideNav = true;
 
   constructor(translate: TranslateService) {
     translate.setDefaultLang('ua');

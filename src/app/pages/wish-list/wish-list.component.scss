@@ -5,12 +5,23 @@
 }
 
 .wish-list {
-  &__grid {
-    &-item {
-      width: 225px;
-      height: 225px;
-      border-radius: 6px;
-      background: aqua;
+  @include flex($justify-c: flex-start, $flex-dir: column);
+
+  &__content {
+    @include flex($align-i: flex-start, $flex-dir: column);
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  &__header {
+    width: 100%;
+    background: aqua;box-sizing: border-box;
+
+    h1 {
+      margin: 0;
     }
+  }
+
+  &__grid {
   }
 }

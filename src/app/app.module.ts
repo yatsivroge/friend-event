@@ -16,6 +16,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatRippleModule } from "@angular/material/core";
 import { WishListModule } from "./pages/wish-list/wish-list.module";
+import {MatButtonModule} from "@angular/material/button";
+import {RouterLink} from "@angular/router";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -27,26 +29,28 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomePageComponent,
     ContentContainerComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatSidenavModule,
-        MatListModule,
-        MatDividerModule,
-        HeaderComponent,
-        HttpClientModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-        StoreModule.forRoot({}, {}),
-        EffectsModule.forRoot([]),
-        MatRippleModule,
-      WishListModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatListModule,
+    MatDividerModule,
+    HeaderComponent,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
+    MatRippleModule,
+    WishListModule,
+    MatButtonModule,
+    RouterLink
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
